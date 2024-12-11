@@ -6,32 +6,38 @@ const features = [
   {
     icon: <Anchor className="w-8 h-8 text-caribbean-500" />,
     title: "Private Marina Access",
-    description: "Exclusive dock access for your yacht adventures in the Caribbean waters"
+    description: "Exclusive dock access for your yacht adventures in the Caribbean waters",
+    image: "/images/features/private-marina.jpg"
   },
   {
     icon: <Ship className="w-8 h-8 text-caribbean-500" />,
-    title: "Luxury Boat",
-    description: "Fully equipped yacht for unforgettable marine experiences and exploration"
+    title: "Adventure Boat",
+    description: "Fully equipped yacht for unforgettable marine experiences and exploration",
+    image: "/images/features/adventure-boat.jpg"
   },
   {
     icon: <Waves className="w-8 h-8 text-caribbean-500" />,
     title: "Private Pools",
-    description: "Multiple infinity pools with breathtaking ocean views and luxury amenities"
+    description: "Multiple pools with breathtaking ocean views and luxury amenities",
+    image: "/images/features/private-pools.jpg"
   },
   {
     icon: <MapPin className="w-8 h-8 text-caribbean-500" />,
     title: "Prime Location",
-    description: "Situated in an exclusive area with easy access to Cancún's best attractions"
+    description: "Situated in an exclusive area with easy access to Cancún's best attractions",
+    image: "/images/features/prime-location.jpg"
   },
   {
     icon: <Trees className="w-8 h-8 text-caribbean-500" />,
     title: "Cozy Garden",
-    description: "Beautifully maintained tropical gardens creating a peaceful paradise"
+    description: "Beautifully maintained tropical gardens creating a peaceful paradise",
+    image: "/images/features/cozy-garden.jpg"
   },
   {
     icon: <Home className="w-8 h-8 text-caribbean-500" />,
     title: "Comfortable Living",
-    description: "Spacious rooms with modern amenities and luxurious furnishings"
+    description: "Spacious rooms with modern amenities and luxurious furnishings",
+    image: "/images/features/comfortable-living.jpg"
   }
 ];
 
@@ -39,9 +45,10 @@ interface FeatureProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  image: string;
 }
 
-function Feature({ icon, title, description }: FeatureProps) {
+function Feature({ icon, title, description, image }: FeatureProps) {
   return (
     <div className="text-center flex-shrink-0 w-80 transform hover:scale-105 transition-transform duration-300 px-6 group">
       <div className="bg-caribbean-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-caribbean-200 transition-colors">
@@ -105,6 +112,7 @@ export function Features() {
                   icon={feature.icon}
                   title={feature.title}
                   description={feature.description}
+                  image={feature.image}
                 />
               </div>
             ))}

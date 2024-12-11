@@ -3,10 +3,11 @@ import { Anchor, Users, Gauge, Compass } from 'lucide-react';
 import { cn } from '../utils/cn';
 
 const BOAT_IMAGES = {
-  main: "https://drive.google.com/uc?export=view&id=1ge1eh2Xek_YM-HF04knZgXzxIVw7J9ic",
-  detail1: "https://drive.google.com/uc?export=view&id=1ISvd4GXz6sLdaNzIFP1GR3vYUYIHZIwz",
-  detail2: "https://drive.google.com/uc?export=view&id=1w3oe5TSVyWSLZS_GweiyUPkOapvM_u2J",
-  detail3: "https://drive.google.com/uc?export=view&id=1W34U6mCiswxkybf9nBXR7xb6-YSeJnh4"
+  main: "/images/boat/boat1.jpg",
+  detail1: "/images/boat/boat2.jpg",
+  detail2: "/images/boat/boat3.jpg",
+  detail3: "/images/boat/boat4.jpg",
+  detail4: "/images/boat/boat5.jpg"
 };
 
 const specs = [
