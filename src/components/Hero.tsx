@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BookingForm } from './BookingForm';
 
 interface HeroProps {
@@ -10,6 +10,8 @@ interface HeroProps {
   onGuestsChange: (guests: string) => void;
 }
 
+const images = ['/images/home1.jpg', '/images/boat1.jpg', '/images/pool1.jpg'];
+
 export function Hero({
   startDate,
   endDate,
@@ -18,10 +20,19 @@ export function Hero({
   onEndDateChange,
   onGuestsChange,
 }: HeroProps) {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className="relative h-[85vh] bg-gradient-to-b from-caribbean-500/95 to-caribbean-600/90">
-      <div 
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f')] bg-cover bg-center opacity-30"
+      <div
+        className={`absolute inset-0 bg-[url('${images[currentImage]}')] bg-cover bg-center opacity-30`}
       />
       
       <div className="relative z-10 flex flex-col items-center justify-center h-[calc(85vh-80px)] text-white text-center px-4 space-y-6">
